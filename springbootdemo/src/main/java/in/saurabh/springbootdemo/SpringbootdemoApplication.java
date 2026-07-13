@@ -14,7 +14,7 @@ public class SpringbootdemoApplication {
 		student.setName("Saurabh");
 		student.setAge(20);
 
-		System.out.println("Name: "+student.getName()+", Age: "+student.getAge());
+		System.out.println("Namegit : "+student.getName()+", Age: "+student.getAge());
 
 	}
 
