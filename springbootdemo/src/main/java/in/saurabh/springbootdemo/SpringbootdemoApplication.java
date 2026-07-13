@@ -1,5 +1,6 @@
 package in.saurabh.springbootdemo;
 
+import in.saurabh.springbootdemo.DependencyInjection.OrderService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,7 +15,10 @@ public class SpringbootdemoApplication {
 		student.setName("Saurabh");
 		student.setAge(20);
 
-		System.out.println("Namegit : "+student.getName()+", Age: "+student.getAge());
+//		System.out.println("Name : "+student.getName()+", Age: "+student.getAge());
+
+		OrderService order = context.getBean(OrderService.class);
+		order.placeOrder();
 
 	}
 
