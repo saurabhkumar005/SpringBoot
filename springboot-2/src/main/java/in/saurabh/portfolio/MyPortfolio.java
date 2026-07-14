@@ -31,5 +31,12 @@ public class MyPortfolio {
                 """;
     }
 
+    @GetMapping("/education")
+    public String myEducation(){
+        return """
+                <h1>My Education</h1>
+                <h2> Graduation: B.Tech CSE (
+                """;
+    }
 
 }
