@@ -39,4 +39,16 @@ public class MyPortfolio {
                 """;
     }
 
+    @GetMapping("/projects")
+    public String myProjects(){
+        return """
+                <h1> My Projects </h1>
+                <h2> SyncMate</h2>
+                <p> A Real Time Chatting Application </p>
+                <p> Tech Stack: Node, Express, React, MySQL </p>
+                <h2> Pg Finder </h2>
+                <p> Tenants can upload their available pgs and student can see and contact them directly </p>
+                <p> Tech Stack: MERN </p>
+                """;
+    }
 }
