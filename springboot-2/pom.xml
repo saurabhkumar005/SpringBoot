@@ -14,6 +14,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version> <!-- Use a stable version, 4.1.0 does not exist yet -->
+        <relativePath/>
+    </parent>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -32,6 +39,9 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>
+                4.1.0
+            </version>
             <scope>test</scope>
         </dependency>
     </dependencies>

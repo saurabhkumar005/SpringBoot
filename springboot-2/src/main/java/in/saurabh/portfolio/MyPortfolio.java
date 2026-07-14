@@ -17,4 +17,19 @@ public class MyPortfolio {
                 </ul>
                 """;
     }
+
+    @GetMapping("/skills")
+    public String mySkills(){
+        return """
+                <ol>
+                <li>Java</li>
+                <li> CPP </li>
+                <li> Problem Solver </li>
+                <li> MERN </li>
+                <li> MYSQL </li>
+                </ol>
+                """;
+    }
+
+
 }
