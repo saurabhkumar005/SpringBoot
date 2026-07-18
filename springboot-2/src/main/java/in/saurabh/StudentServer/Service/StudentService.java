@@ -1,6 +1,10 @@
-package in.saurabh.StudentServer;
+package in.saurabh.StudentServer.Service;
 
+import in.saurabh.StudentServer.Entity.Student;
+import in.saurabh.StudentServer.Repository.StudentRepository;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
 
 @Service
 public class StudentService {
@@ -16,6 +20,10 @@ public class StudentService {
         String department = student.getDepartment();
         int age = student.getAge();
 
+        student.setCreatedAt(LocalDateTime.now());
+        student.setUpdatedAt(LocalDateTime.now());
+
+
         if(id<0 || name==null || age<=0 || department==null ){
             return null;
         }
@@ -23,5 +31,13 @@ public class StudentService {
         Student res = studentRepository.save(student);
         return res;
     }
+
+    //update route
+
+    public Student updateStudent(Student student){
+
+    }
+
+
 }
 

@@ -1,7 +1,7 @@
-package in.saurabh.StudentServer;
+package in.saurabh.StudentServer.Repository;
 
+import in.saurabh.StudentServer.Entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 
 public interface StudentRepository extends JpaRepository<Student, Integer> {

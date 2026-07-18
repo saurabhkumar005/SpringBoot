@@ -1,12 +1,13 @@
-package in.saurabh.StudentServer;
+package in.saurabh.StudentServer.Controller;
 
+import in.saurabh.StudentServer.Service.StudentService;
+import in.saurabh.StudentServer.Entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api/student")
 public class StudentController {
 
     StudentService studentService;
@@ -24,5 +25,11 @@ public class StudentController {
             return ResponseEntity.status(400).body(result);
         }
         return ResponseEntity.status(201).body(result);
- }
+    }
+
+
+
+
+
+
 }
