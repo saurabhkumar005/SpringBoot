@@ -34,8 +34,32 @@ public class StudentService {
 
     //update route
 
-    public Student updateStudent(Student student){
+    public Student getStudentByID(int id){
+        return studentRepository.findById(id).orElse(null);
+    }
 
+    public Student updateStudentByID(int id, Student student){
+        Student oldStudent = studentRepository.findById(id).orElse(null);
+        if(oldStudent==null){
+            return null;
+        }
+        oldStudent.setAge(student.getAge());
+        oldStudent.setDepartment(student.getDepartment());
+        oldStudent.setName(student.getName());
+        oldStudent.setUpdatedAt(LocalDateTime.now());
+
+        Student res = studentRepository.save(oldStudent);
+        return res;
+
+    }
+
+    public Student deleteStudentByID(int id){
+        Student res = studentRepository.findById(id).orElse(null);
+        if(res==null){
+            return null;
+        }
+        studentRepository.delete(res);
+        return res;
     }
 
 
