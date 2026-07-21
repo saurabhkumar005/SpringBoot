@@ -17,8 +17,17 @@ public class Student {
     String name;
     int age;
     String department;
+    String email;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        email = email;
+    }
 
     public LocalDateTime getUpdatedAt() {
         return updatedAt;

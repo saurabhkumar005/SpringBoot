@@ -12,6 +12,7 @@ public class CreateStudentRequestDTO {
     String name;
     int age;
     String department;
+    String email;
 //    private LocalDateTime createdAt;
 //    private LocalDateTime updatedAt;
 }

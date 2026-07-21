@@ -10,4 +10,5 @@ public class UpdateStudentResponseDTO {
     String name;
     int age;
     String department;
+    String email;
 }

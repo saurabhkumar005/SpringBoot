@@ -53,6 +53,7 @@ public class StudentService {
         student1.setDepartment(student.getDepartment());
         student1.setCreatedAt(LocalDateTime.now());
         student1.setUpdatedAt(LocalDateTime.now());
+        student1.setEmail(student.getEmail());
 
         return student1;
 
@@ -91,7 +92,7 @@ public class StudentService {
             return null;
         }
 
-        //Reqquest mapping
+        //Request mapping
         oldStudent.setName(student.getName());
         oldStudent.setAge(student.getAge());
         oldStudent.setUpdatedAt(LocalDateTime.now());
@@ -105,6 +106,7 @@ public class StudentService {
         res.setName(oldStudent.getName());
         res.setId(oldStudent.getId());
         res.setDepartment(oldStudent.getDepartment());
+        res.setEmail(oldStudent.getEmail());
 
         return res;
     }
@@ -126,6 +128,7 @@ public class StudentService {
         createStudentResponseDTO.setDepartment(student.getDepartment());
         createStudentResponseDTO.setAge(student.getAge());
         createStudentResponseDTO.setName(student.getName());
+        createStudentResponseDTO.setEmail(student.getEmail());
 
         return createStudentResponseDTO;
     }

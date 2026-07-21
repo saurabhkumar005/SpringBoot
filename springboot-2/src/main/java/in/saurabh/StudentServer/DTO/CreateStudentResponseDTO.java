@@ -10,5 +10,6 @@ public class CreateStudentResponseDTO {
     String name;
     int age;
     String department;
+    String email;
 
 }
