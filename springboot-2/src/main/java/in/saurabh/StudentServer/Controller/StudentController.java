@@ -54,9 +54,9 @@ public class StudentController {
     @GetMapping("/get/{id}")
     public ResponseEntity<?> getStudent(@PathVariable int id){
         Student res = studentService.getStudentByID(id);
-        if(res==null){
-            return ResponseEntity.status(400).body("Invalid ID, User Not Found!");
-        }
+//        if(res==null){
+//            return ResponseEntity.status(400).body("Invalid ID, User Not Found!");
+//        }
         return ResponseEntity.status(200).body(res);
 
     }

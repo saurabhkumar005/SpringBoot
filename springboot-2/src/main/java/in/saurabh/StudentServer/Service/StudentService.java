@@ -9,6 +9,7 @@ import in.saurabh.StudentServer.Repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 public class StudentService {
@@ -60,7 +61,8 @@ public class StudentService {
 
 
     public Student getStudentByID(int id){
-        return studentRepository.findById(id).orElse(null);
+        Optional<Student> res = studentRepository.findById(id);
+        return res.get();
     }
 
     //update route

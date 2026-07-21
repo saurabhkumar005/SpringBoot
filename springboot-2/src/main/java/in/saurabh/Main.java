@@ -1,6 +1,7 @@
 package in.saurabh;
 
 
+import in.saurabh.Scope.LPU;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,5 +10,8 @@ public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
 
+
+
+        //        LPU lpu = new LPU();
     }
 }
